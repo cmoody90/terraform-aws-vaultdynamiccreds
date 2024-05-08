@@ -5,12 +5,15 @@ variable "aws_region" {
 
 variable "db_name" {
   description = "The name of the database"
+  default     = ""
 }
 
 variable "username" {
   description = "The username for database access"
+  default     = ""
 }
 
 variable "password" {
   description = "The password for database access"
+  default     = ""
 }
