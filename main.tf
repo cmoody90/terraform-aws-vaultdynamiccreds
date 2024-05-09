@@ -82,9 +82,9 @@ resource "aws_db_instance" "new_rds_instance" {
   engine               = "mysql"
   engine_version       = "8.0.36"
   instance_class       = "db.t3.micro"
-  db_name              = "var.db_name"
-  username             = "var.username"
-  password             = "var.password"
+  db_name              = var.db_name
+  username             = var.username
+  password             = var.password
   parameter_group_name = "default.mysql8.0"
   db_subnet_group_name = aws_db_subnet_group.new_db_subnet_group.name
   vpc_security_group_ids = [aws_security_group.new_sg.id]
